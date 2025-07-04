@@ -1,123 +1,101 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAHA – נוסחה מתקדמת מאת אהרון רוני פסח</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RAHA – Roni's Adjusted Hybrid Average</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      color: #222;
+      direction: rtl;
       text-align: center;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
     }
     header {
-      background-color: #1e88e5;
+      background-color: #1684e0;
+      padding: 20px;
       color: white;
-      padding: 2rem;
-      font-size: 2rem;
-      position: relative;
     }
-    .logo {
-      position: absolute;
-      left: 2rem;
-      top: 1rem;
+    header img {
       height: 60px;
+      vertical-align: middle;
+      margin-left: 15px;
     }
     main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    .download-btn {
-      background-color: #1e88e5;
-      color: white;
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 1.1rem;
-      border-radius: 8px;
-      text-decoration: none;
-      margin: 2rem 0;
-      display: inline-block;
-    }
-    .download-btn:hover {
-      background-color: #1565c0;
-    }
-    section {
-      margin-bottom: 3rem;
+      padding: 30px 20px;
     }
     code {
-      background-color: #eee;
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
-      direction: ltr;
+      background-color: #f1f1f1;
       display: inline-block;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      direction: ltr;
+      text-align: left;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 15px;
+      background-color: #1684e0;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
     }
     footer {
-      background-color: #eee;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #555;
+      margin-top: 50px;
+      padding: 10px;
+      background-color: #f1f1f1;
+      font-size: 0.9em;
+    }
+    h1 {
+      font-size: 1.6em;
     }
   </style>
 </head>
 <body>
+
   <header>
-    נוסחת RAHA – מאת אהרון רוני פסח
-    <img class="logo" src="logo.png" alt="Wall Street Sharks Logo">
+    <img src="wallstreet-sharks-logo.jpg" alt="Wall Street Sharks Logo" />
+    <h1>הממוצע ההיברידי המתואם של רוני – <span dir="ltr">RAHA – Roni's Adjusted Hybrid Average</span></h1>
   </header>
+
   <main>
-    <section>
-      <h2>מהי נוסחת RAHA?</h2>
-      <p>
-        RAHA (Roni's Adjusted Hybrid Average) היא נוסחה חדשנית לחישוב ממוצע, 
-        אשר בניגוד לממוצע רגיל לא מתעלמת מערכים קיצוניים, אלא שוקלת אותם במשקל נמוך יותר – בהתאם לסטייתם מהממוצע.
-        כך מתקבל ממוצע היברידי שמאזן בין רגישות לשינויים לבין יציבות לאורך זמן.
-      </p>
-    </section>
+    <h2>מהי נוסחת RAHA?</h2>
+    <p>
+      RAHA היא נוסחה חדשנית לחישוב ממוצע, אשר בניגוד לממוצע רגיל לא מתעלמת מערכים קיצוניים, אלא שוקלת אותם במשקל נמוך יותר – בהתאם לסטייתם מהממוצע. כך מתקבל ממוצע היברידי שמאזן בין רגישות לשינויים לבין יציבות לאורך זמן.
+    </p>
 
-    <section>
-      <h3>📐 נוסחת החישוב</h3>
-      <p>עבור טווח N ימים, הנוסחה היא:</p>
-      <code>
-        RAHA = Σ(xᵢ × wᵢ) / Σ(wᵢ)<br>
-        כאשר wᵢ = 1 / (1 + sensitivity × |xᵢ - mean| / stddev)
-      </code>
-      <p>
-        כלומר: כל ערך x מקבל משקל הפוך לסטייתו מהממוצע – ערכים חריגים נלקחים בחשבון, אך משקלם נמוך.
-      </p>
-    </section>
+    <h3>🔢 נוסחת החישוב</h3>
+    <p>עבור טווח N ימים, הנוסחה היא:</p>
+    <code>
+      RAHA = Σ(xᵢ × wᵢ) / Σ(wᵢ)<br/>
+      כאשר wᵢ = 1 / (1 + sensitivity × |xᵢ − mean| / stddev)
+    </code>
 
-    <section>
-      <h3>🔍 דוגמה חישובית (פשטנית)</h3>
-      <p>
-        נניח שערי סגירה: 100, 101, 102, 103, 180 (חריג)<br>
-        ממוצע רגיל: 117.2<br>
-        ממוצע RAHA: ~102.5 (כיוון שה-180 קיבל משקל נמוך יותר)
-      </p>
-      <p>
-        קובץ האקסל המצורף מציג את המימוש המלא עם התאמה לסטיית תקן, רמות סף והתנסות חיה.
-      </p>
-    </section>
+    <p>
+      כלומר: כל ערך x מקבל משקל הפוך לסטייתו מהממוצע – ערכים חריגים נלקחים בחשבון, אך משקלם נמוך.
+    </p>
 
-    <section>
-      <h3>⬇️ הורד את קובץ האקסל עם הנוסחה</h3>
-      <a class="download-btn" href="RAHA_Excel.xlsx" download>הורד את הקובץ</a>
-    </section>
+    <h3>🔍 דוגמה חישובית (פשטנית)</h3>
+    <p>
+      נניח שערי סגירה: 100, 101, 102, 103, 180 (חריג)<br/>
+      הממוצע הרגיל: 117.2<br/>
+      RAHA (בהנחה שערך 180 קיבל משקל נמוך יותר): ~102.5
+    </p>
 
-    <section>
-      <h3>🔗 קישורים חשובים</h3>
-      <p>
-        <a href="https://github.com/RoniPesach/RAHA-formula" target="_blank">מעבר לריפוזיטורי GitHub</a>
-      </p>
-    </section>
+    <a class="button" href="RAHA_Example.xlsx" download>📥 הורד את קובץ האקסל עם הנוסחה</a>
+
+    <p style="margin-top: 30px;">
+      🔗 <a href="https://github.com/RoniPesach/RAHA-formula" target="_blank">הצג את הקוד והתיעוד המלא ב‑GitHub</a>
+    </p>
   </main>
 
   <footer>
-    &copy; 2025 אהרון רוני פסח | כל הזכויות שמורות
+    © 2025 אהרון רוני פסח | כל הזכויות שמורות
   </footer>
+
 </body>
 </html>
