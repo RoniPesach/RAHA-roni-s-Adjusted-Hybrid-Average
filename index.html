@@ -1,70 +1,70 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="RAHA - ממוצע היברידי מתואם מאת אהרון רוני פסח" />
-  <title>RAHA – ממוצע היברידי מתואם</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAHA by אהרון רוני פסח</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f5f7fa;
+      background: #f7f7f7;
+      color: #222;
+      text-align: center;
       margin: 0;
       padding: 0;
-      direction: rtl;
-      color: #333;
     }
-    .container {
-      max-width: 900px;
-      margin: 50px auto;
-      background: white;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    .github-link {
-      margin-top: 20px;
-      display: inline-block;
-      background: #24292e;
+    header {
+      background-color: #1e88e5;
       color: white;
-      padding: 10px 15px;
-      border-radius: 5px;
+      padding: 1.5rem;
+      font-size: 1.8rem;
+    }
+    main {
+      padding: 2rem;
+    }
+    .download-btn {
+      background-color: #1e88e5;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 8px;
       text-decoration: none;
+      margin-top: 1rem;
+      display: inline-block;
     }
-    .github-link:hover {
-      background: #444c56;
+    .download-btn:hover {
+      background-color: #1565c0;
     }
-    .footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #777;
-      text-align: center;
+    footer {
+      background-color: #eee;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>RAHA – ממוצע היברידי מתואם</h1>
-    <p><strong>פותח על ידי:</strong> אהרון רוני פסח</p>
-
+  <header>
+    נוסחת RAHA – אהרון רוני פסח
+  </header>
+  <main>
+    <h2>מהי נוסחת RAHA?</h2>
     <p>
-      RAHA היא נוסחה לחישוב ממוצע שמנטרלת השפעה של ערכים קיצוניים (גבוהים ונמוכים) באמצעות שילוב בין ממוצע משוקלל רגיל לבין ממוצע מקוצץ. היא שימושית במיוחד בהקשרים של חינוך, ניתוחים פיננסיים, סקרים ועוד.
+      RAHA (Roni's Adjusted Hybrid Average) היא נוסחה חדשנית לחישוב ממוצע שמתחשב בערכים קיצוניים אך מעניק להם משקל נמוך. 
+      בכך מתקבל ממוצע יציב יותר, אך רגיש לשינויים מהותיים.
     </p>
 
-    <h2>📂 קישורים חשובים:</h2>
-    <ul>
-      <li><a href="https://github.com/RoniPesach/RAHA-formula" target="_blank">ריפוזיטורי GitHub</a> – כולל נוסחה, דוגמה באקסל ותיעוד מלא</li>
-      <li><a href="RAHA_Official_Declaration.pdf" download>הצהרה רשמית (PDF)</a></li>
-    </ul>
+    <h3>הורדת קובץ אקסל עם הנוסחה</h3>
+    <a class="download-btn" href="RAHA_Excel.xlsx" download>הורד את הקובץ</a>
 
-    <a class="github-link" href="https://github.com/RoniPesach/RAHA-formula" target="_blank">צפה בנוסחה ב-GitHub</a>
-
-    <div class="footer">
-      &copy; 2025 אהרון רוני פסח | כל הזכויות שמורות
-    </div>
-  </div>
+    <h3>קישורים חשובים</h3>
+    <p>
+      <a href="https://github.com/RoniPesach/RAHA-formula" target="_blank">עבור לריפוזיטורי ב‑GitHub</a>
+    </p>
+  </main>
+  <footer>
+    &copy; 2025 אהרון רוני פסח | כל הזכויות שמורות
+  </footer>
 </body>
 </html>
